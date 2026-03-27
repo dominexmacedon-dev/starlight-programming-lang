@@ -1,4 +1,4 @@
-# Starlight Language (starlight-language)
+# Starlight Language (starlight-programming-lang)
 
 **Starlight Language** is a lightweight server-side scripting programming language built with JavaScript. It provides a custom interpreter and command-line interface (CLI) runtime for executing `.sl` scripts.
 
