@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starlight Arrays Guide – Array Operations, Slicing, Map, Filter</title>
+
+    <meta name="description" content="Learn arrays in Starlight programming language with examples: creation, indexing, slicing, map, filter, reduce and more.">
+    <meta name="keywords" content="starlight arrays, array slicing, map filter reduce, scripting language arrays, programming examples">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #e5e7eb;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #020617;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h2 {
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 8px;
+        }
+
+        pre {
+            background: #020617;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Starlight Arrays Guide</h1>
+    <p>Learn array operations, slicing, and transformations in Starlight</p>
+</header>
+
+<div class="container">
+
+    <!-- 1 -->
+    <section>
+        <h2>1. Creating Arrays</h2>
+        <pre><code>
+# Create an array
+let numbers = [1, 2, 3, 4, 5];
+
+# Print array
+sldeploy "Array: " + numbers;
+        </code></pre>
+    </section>
+
+    <!-- 2 -->
+    <section>
+        <h2>2. Accessing Elements</h2>
+        <pre><code>
+# Define array
+let fruits = ["apple", "banana", "cherry"];
+
+# Access elements by index
+sldeploy "First: " + fruits[0];
+sldeploy "Second: " + fruits[1];
+        </code></pre>
+    </section>
+
+    <!-- 3 -->
+    <section>
+        <h2>3. Array Slicing</h2>
+        <pre><code>
+# Create array
+let arr = [10, 20, 30, 40, 50];
+
+# Slice from index 1 to 4
+let part = arr[1:4];
+
+sldeploy "Slice: " + part;
+        </code></pre>
+    </section>
+
+    <!-- 4 -->
+    <section>
+        <h2>4. Slice with Step</h2>
+        <pre><code>
+# Create array
+let arr = [1, 2, 3, 4, 5, 6];
+
+# Slice with step (every 2 elements)
+let result = arr[0:6:2];
+
+sldeploy "Step slice: " + result;
+        </code></pre>
+    </section>
+
+    <!-- 5 -->
+    <section>
+        <h2>5. Adding and Removing Elements</h2>
+        <pre><code>
+# Create array
+let arr = [1, 2, 3];
+
+# Add element
+push(arr, 4);
+
+# Remove last element
+pop(arr);
+
+sldeploy "Array: " + arr;
+        </code></pre>
+    </section>
+
+    <!-- 6 -->
+    <section>
+        <h2>6. Map (Transform Array)</h2>
+        <pre><code>
+# Create array
+let nums = [1, 2, 3];
+
+# Multiply each element by 2
+let doubled = map(nums, (x) => x * 2);
+
+sldeploy "Doubled: " + doubled;
+        </code></pre>
+    </section>
+
+    <!-- 7 -->
+    <section>
+        <h2>7. Filter (Select Values)</h2>
+        <pre><code>
+# Create array
+let nums = [1, 2, 3, 4, 5];
+
+# Keep even numbers
+let evens = filter(nums, (x) => x % 2 == 0);
+
+sldeploy "Evens: " + evens;
+        </code></pre>
+    </section>
+
+    <!-- 8 -->
+    <section>
+        <h2>8. Reduce (Aggregate Values)</h2>
+        <pre><code>
+# Create array
+let nums = [10, 20, 30];
+
+# Sum all values
+let total = reduce(nums, (acc, val) => acc + val, 0);
+
+sldeploy "Total: " + total;
+        </code></pre>
+    </section>
+
+    <!-- 9 -->
+    <section>
+        <h2>9. Loop Through Array</h2>
+        <pre><code>
+# Create array
+let arr = [5, 10, 15];
+
+# Iterate through array
+for item in arr {
+
+    # Print each value
+    sldeploy "Value: " + item;
+}
+        </code></pre>
+    </section>
+
+    <!-- 10 -->
+    <section>
+        <h2>10. Nested Arrays</h2>
+        <pre><code>
+# Create nested array
+let arr = [[1,2], [3,4]];
+
+# Access nested values
+sldeploy "Value: " + arr[0][1];
+        </code></pre>
+    </section>
+
+</div>
+
+</body>
+</html>
