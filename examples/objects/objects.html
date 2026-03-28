@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starlight Objects Guide – Properties, Access, Nested Objects, Methods</title>
+
+    <meta name="description" content="Learn objects in Starlight programming language including creation, property access, updates, loops, nested objects and real-world examples.">
+    <meta name="keywords" content="starlight objects, object properties, nested objects, scripting language objects, programming examples">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #e5e7eb;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #020617;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h2 {
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 8px;
+        }
+
+        pre {
+            background: #020617;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Starlight Objects Guide</h1>
+    <p>Learn how to work with objects and structured data in Starlight</p>
+</header>
+
+<div class="container">
+
+    <!-- 1 -->
+    <section>
+        <h2>1. Creating Objects</h2>
+        <pre><code>
+# Create an object
+let user = {
+    "name": "Alice",
+    "age": 25
+};
+
+# Print object
+sldeploy user;
+        </code></pre>
+    </section>
+
+    <!-- 2 -->
+    <section>
+        <h2>2. Accessing Properties</h2>
+        <pre><code>
+# Access using dot notation
+sldeploy user.name;
+
+# Access using bracket notation
+sldeploy user["age"];
+        </code></pre>
+    </section>
+
+    <!-- 3 -->
+    <section>
+        <h2>3. Updating Properties</h2>
+        <pre><code>
+# Update existing value
+user.age = 30;
+
+# Add new property
+user.city = "New York";
+
+sldeploy user;
+        </code></pre>
+    </section>
+
+    <!-- 4 -->
+    <section>
+        <h2>4. Loop Through Object</h2>
+        <pre><code>
+# Iterate over keys
+for key in user {
+
+    # Access value using key
+    sldeploy key + ": " + user[key];
+}
+        </code></pre>
+    </section>
+
+    <!-- 5 -->
+    <section>
+        <h2>5. Nested Objects</h2>
+        <pre><code>
+# Create nested object
+let person = {
+    "name": "Bob",
+    "address": {
+        "city": "London",
+        "zip": 12345
+    }
+};
+
+# Access nested value
+sldeploy person.address.city;
+        </code></pre>
+    </section>
+
+    <!-- 6 -->
+    <section>
+        <h2>6. Objects Inside Arrays</h2>
+        <pre><code>
+# Array of objects
+let users = [
+    { "name": "Alice", "age": 25 },
+    { "name": "Bob", "age": 30 }
+];
+
+# Loop through array
+for item in users {
+
+    # Access object properties
+    sldeploy item.name + " - " + item.age;
+}
+        </code></pre>
+    </section>
+
+    <!-- 7 -->
+    <section>
+        <h2>7. Check Property Exists</h2>
+        <pre><code>
+# Check if key exists
+if (has(user, "name")) {
+    sldeploy "Name exists";
+}
+        </code></pre>
+    </section>
+
+    <!-- 8 -->
+    <section>
+        <h2>8. Merge Objects</h2>
+        <pre><code>
+# Merge two objects
+let a = { "x": 1 };
+let b = { "y": 2 };
+
+let merged = merge(a, b);
+
+sldeploy merged;
+        </code></pre>
+    </section>
+
+    <!-- 9 -->
+    <section>
+        <h2>9. Clone Object</h2>
+        <pre><code>
+# Create copy
+let copy = clone(user);
+
+# Modify copy
+copy.name = "Charlie";
+
+# Original remains unchanged
+sldeploy user.name;
+sldeploy copy.name;
+        </code></pre>
+    </section>
+
+    <!-- 10 -->
+    <section>
+        <h2>10. Real Example (User System)</h2>
+        <pre><code>
+# Store multiple users
+let users = {};
+
+# Add user
+users["alice"] = { "balance": 100 };
+
+# Access user
+let u = users["alice"];
+
+# Update balance
+u.balance = u.balance + 50;
+
+sldeploy "Balance: " + u.balance;
+        </code></pre>
+    </section>
+
+</div>
+
+</body>
+</html>
