@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starlight Loops Guide – While, For, For-In Examples</title>
+
+    <meta name="description" content="Learn looping in Starlight programming language with examples: while loop, for loop, for-in loop, break and continue.">
+    <meta name="keywords" content="starlight loops, starlight while loop, starlight for loop, scripting language loops, programming examples">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #e5e7eb;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #020617;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        pre {
+            background: #020617;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        h2 {
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Starlight Looping Guide</h1>
+    <p>Learn how loops work in the Starlight programming language</p>
+</header>
+
+<div class="container">
+
+    <!-- Example 1 -->
+    <section>
+        <h2>1. While Loop</h2>
+        <pre><code>
+# Initialize counter
+define i = 0;
+
+# Loop runs while condition is true
+while (i < 5) {
+
+    # Print current value
+    sldeploy "i: " + i;
+
+    # Increase counter
+    i = i + 1;
+}
+        </code></pre>
+    </section>
+
+    <!-- Example 2 -->
+    <section>
+        <h2>2. For Loop</h2>
+        <pre><code>
+# Loop with initialization, condition, increment
+for (define i = 0; i < 5; i = i + 1) {
+
+    # Print current iteration
+    sldeploy "i: " + i;
+}
+        </code></pre>
+    </section>
+
+    <!-- Example 3 -->
+    <section>
+        <h2>3. For-In Loop (Array)</h2>
+        <pre><code>
+# Create an array
+define arr = [10, 20, 30];
+
+# Iterate over each element
+for item in arr {
+
+    # Print each value
+    sldeploy "Value: " + item;
+}
+        </code></pre>
+    </section>
+
+    <!-- Example 4 -->
+    <section>
+        <h2>4. Break Statement</h2>
+        <pre><code>
+# Loop with break condition
+for (define i = 0; i < 10; i = i + 1) {
+
+    # Stop loop when i equals 5
+    if (i == 5) {
+        break;
+    }
+
+    # Print values before break
+    sldeploy "i: " + i;
+}
+        </code></pre>
+    </section>
+
+    <!-- Example 5 -->
+    <section>
+        <h2>5. Continue Statement</h2>
+        <pre><code>
+# Loop with continue
+for (define i = 0; i < 5; i = i + 1) {
+
+    # Skip when i equals 2
+    if (i == 2) {
+        continue;
+    }
+
+    # Print remaining values
+    sldeploy "i: " + i;
+}
+        </code></pre>
+    </section>
+
+</div>
+
+</body>
+</html>
