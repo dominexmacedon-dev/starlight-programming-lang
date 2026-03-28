@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starlight Functions Guide – Declaration, Parameters, Return, Arrow Functions</title>
+
+    <meta name="description" content="Learn functions in Starlight programming language including declaration, parameters, return values, arrow functions and best practices.">
+    <meta name="keywords" content="starlight functions, function declaration, arrow functions, scripting language functions, programming examples">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #e5e7eb;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #020617;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h2 {
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 8px;
+        }
+
+        pre {
+            background: #020617;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Starlight Functions Guide</h1>
+    <p>Learn how to define and use functions in Starlight</p>
+</header>
+
+<div class="container">
+
+    <!-- 1 -->
+    <section>
+        <h2>1. Function Declaration</h2>
+        <pre><code>
+# Define a function
+func greet() {
+
+    # Print message
+    sldeploy "Hello!";
+}
+
+# Call function
+greet();
+        </code></pre>
+    </section>
+
+    <!-- 2 -->
+    <section>
+        <h2>2. Function with Parameters</h2>
+        <pre><code>
+# Function with parameters
+func greet(name) {
+
+    # Use parameter
+    sldeploy "Hello " + name;
+}
+
+greet("Alice");
+greet("Bob");
+        </code></pre>
+    </section>
+
+    <!-- 3 -->
+    <section>
+        <h2>3. Return Values</h2>
+        <pre><code>
+# Function returning value
+func add(a, b) {
+
+    # Return result
+    return a + b;
+}
+
+let result = add(2, 3);
+
+sldeploy "Result: " + result;
+        </code></pre>
+    </section>
+
+    <!-- 4 -->
+    <section>
+        <h2>4. Default Behavior (No Return)</h2>
+        <pre><code>
+# Function without return
+func test() {
+
+    sldeploy "Running function";
+}
+
+# Returns null automatically
+let value = test();
+
+sldeploy "Returned: " + value;
+        </code></pre>
+    </section>
+
+    <!-- 5 -->
+    <section>
+        <h2>5. Arrow Functions</h2>
+        <pre><code>
+# Short arrow function
+let add = (a, b) => a + b;
+
+let result = add(5, 10);
+
+sldeploy result;
+        </code></pre>
+    </section>
+
+    <!-- 6 -->
+    <section>
+        <h2>6. Arrow Function (Block Form)</h2>
+        <pre><code>
+# Arrow with multiple lines
+let multiply = (a, b) => {
+
+    # Explicit return
+    return a * b;
+};
+
+sldeploy multiply(3, 4);
+        </code></pre>
+    </section>
+
+    <!-- 7 -->
+    <section>
+        <h2>7. Functions Inside Functions</h2>
+        <pre><code>
+# Outer function
+func outer() {
+
+    # Inner function
+    func inner() {
+        sldeploy "Inside inner function";
+    }
+
+    inner();
+}
+
+outer();
+        </code></pre>
+    </section>
+
+    <!-- 8 -->
+    <section>
+        <h2>8. Function with Condition</h2>
+        <pre><code>
+# Function with logic
+func check(num) {
+
+    if (num > 0) {
+        return "Positive";
+    }
+
+    return "Negative";
+}
+
+sldeploy check(10);
+sldeploy check(-5);
+        </code></pre>
+    </section>
+
+    <!-- 9 -->
+    <section>
+        <h2>9. Passing Function as Value</h2>
+        <pre><code>
+# Function that accepts another function
+func apply(fn, value) {
+
+    return fn(value);
+}
+
+# Arrow function as argument
+let result = apply((x) => x * 2, 5);
+
+sldeploy result;
+        </code></pre>
+    </section>
+
+    <!-- 10 -->
+    <section>
+        <h2>10. Recursive Function</h2>
+        <pre><code>
+# Recursive factorial
+func factorial(n) {
+
+    # Base case
+    if (n == 0) {
+        return 1;
+    }
+
+    # Recursive call
+    return n * factorial(n - 1);
+}
+
+sldeploy factorial(5);
+        </code></pre>
+    </section>
+
+</div>
+
+</body>
+</html>
