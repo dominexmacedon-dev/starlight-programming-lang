@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starlight Programming Language – Lightweight Server-Side Scripting Language</title>
+
+    <meta name="description" content="Starlight is a lightweight server-side scripting language with its own CLI runtime. Learn how interpreters work with lexer, parser, and evaluator.">
+    <meta name="keywords" content="starlight programming language, scripting language, interpreter, lexer parser evaluator, CLI runtime, programming language tutorial">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #e5e7eb;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #020617;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h2 {
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 8px;
+        }
+
+        pre {
+            background: #020617;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #1e293b;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #020617;
+        }
+
+        a {
+            color: #38bdf8;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Starlight Programming Language</h1>
+    <p>A lightweight scripting language designed to explore how programming languages work internally</p>
+</header>
+
+<div class="container">
+
+    <!-- Introduction -->
+    <section>
+        <h2>Overview</h2>
+        <p>
+            Starlight is a lightweight server-side scripting language with its own CLI runtime.
+            It is designed to help developers understand how interpreters work — from source code to execution.
+        </p>
+    </section>
+
+    <!-- Features -->
+    <section>
+        <h2>Key Features</h2>
+        <table>
+            <tr><th>Feature</th><th>Description</th></tr>
+            <tr><td>Simple Syntax</td><td>Easy to read and write</td></tr>
+            <tr><td>Interpreter Pipeline</td><td>Lexer → Parser → Evaluator</td></tr>
+            <tr><td>CLI Runtime</td><td>Run scripts directly from terminal</td></tr>
+            <tr><td>Extensible</td><td>Designed for experimentation</td></tr>
+        </table>
+    </section>
+
+    <!-- Installation -->
+    <section>
+        <h2>Installation</h2>
+        <pre><code>
+npm install -g starlight-cli
+        </code></pre>
+    </section>
+
+    <!-- Usage -->
+    <section>
+        <h2>Usage</h2>
+        <pre><code>
+starlight file.sl
+        </code></pre>
+    </section>
+
+    <!-- Example -->
+    <section>
+        <h2>Example</h2>
+        <pre><code>
+# Hello world
+sldeploy "Hello, Starlight!";
+        </code></pre>
+    </section>
+
+    <!-- Pipeline -->
+    <section>
+        <h2>Execution Pipeline</h2>
+        <pre><code>
+file.sl
+ ↓
+lexer.js
+ ↓
+parser.js
+ ↓
+evaluator.js
+ ↓
+Output
+        </code></pre>
+    </section>
+
+    <!-- Components -->
+    <section>
+        <h2>Core Components</h2>
+        <table>
+            <tr><th>File</th><th>Role</th></tr>
+            <tr><td>lexer.js</td><td>Tokenizes source code</td></tr>
+            <tr><td>parser.js</td><td>Builds AST</td></tr>
+            <tr><td>evaluator.js</td><td>Executes AST</td></tr>
+            <tr><td>starlight.js</td><td>CLI entry point</td></tr>
+        </table>
+    </section>
+
+    <!-- Why -->
+    <section>
+        <h2>Why Starlight</h2>
+        <p>
+            Modern languages hide internal mechanisms. Starlight exposes them.
+            It is built for learning, experimentation, and understanding interpreter design.
+        </p>
+    </section>
+
+    <!-- Comparison -->
+    <section>
+        <h2>Comparison</h2>
+        <table>
+            <tr>
+                <th>Language</th>
+                <th>Best Use</th>
+            </tr>
+            <tr>
+                <td>Starlight</td>
+                <td>Learning interpreters</td>
+            </tr>
+            <tr>
+                <td>Python</td>
+                <td>General-purpose programming</td>
+            </tr>
+            <tr>
+                <td>JavaScript</td>
+                <td>Web development</td>
+            </tr>
+            <tr>
+                <td>PHP</td>
+                <td>Server-side web</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Docs -->
+    <section>
+        <h2>Documentation</h2>
+        <ul>
+            <li>Syntax Guide</li>
+            <li>Functions</li>
+            <li>Arrays</li>
+            <li>Objects</li>
+            <li>Examples</li>
+        </ul>
+    </section>
+
+    <!-- Goals -->
+    <section>
+        <h2>Project Goals</h2>
+        <ul>
+            <li>Teach interpreter architecture</li>
+            <li>Provide a simple scripting tool</li>
+            <li>Enable experimentation</li>
+        </ul>
+    </section>
+
+    <!-- Future -->
+    <section>
+        <h2>Future Improvements</h2>
+        <ul>
+            <li>Advanced parser (AND / OR support)</li>
+            <li>Standard library expansion</li>
+            <li>Package system</li>
+            <li>Error improvements</li>
+        </ul>
+    </section>
+
+    <!-- Author -->
+    <section>
+        <h2>Author</h2>
+        <p>
+            Created by <strong>Dominex Macedon (Nyi Nyi Linn Htet)</strong>
+        </p>
+    </section>
+
+</div>
+
+</body>
+</html>
