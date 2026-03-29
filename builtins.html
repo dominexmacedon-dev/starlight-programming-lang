@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starlight Language Built-in Functions</title>
+
+    <meta name="description" content="Complete reference for Starlight programming language built-in functions including string, math, array, file system, network, and utility functions.">
+    <meta name="keywords" content="starlight built-in functions, scripting language functions, standard library reference, interpreter builtins, string math array functions">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #e5e7eb;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #020617;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h2 {
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 6px;
+            margin-top: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            border: 1px solid #1e293b;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #020617;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Starlight Built-in Functions</h1>
+    <p>Complete Standard Library Reference</p>
+</header>
+
+<div class="container">
+
+    <h2>1. String Functions</h2>
+    <table>
+        <tr><th>Function</th><th>Description</th></tr>
+        <tr><td>lower(str)</td><td>Convert to lowercase</td></tr>
+        <tr><td>upper(str)</td><td>Convert to uppercase</td></tr>
+        <tr><td>trim(str)</td><td>Remove whitespace</td></tr>
+        <tr><td>trimStart(str)</td><td>Trim start</td></tr>
+        <tr><td>trimEnd(str)</td><td>Trim end</td></tr>
+        <tr><td>capitalize(str)</td><td>Capitalize first character</td></tr>
+        <tr><td>reverseStr(str)</td><td>Reverse string</td></tr>
+        <tr><td>startsWith(str, prefix)</td><td>Check prefix</td></tr>
+        <tr><td>endsWith(str, suffix)</td><td>Check suffix</td></tr>
+        <tr><td>includes(str, substr)</td><td>Check substring</td></tr>
+        <tr><td>repeat(str, times)</td><td>Repeat string</td></tr>
+        <tr><td>repeatStr(str, times)</td><td>Alias of repeat</td></tr>
+        <tr><td>replace(str, a, b)</td><td>Replace text</td></tr>
+        <tr><td>split(str, sep)</td><td>Split string</td></tr>
+        <tr><td>join(arr, sep)</td><td>Join array</td></tr>
+        <tr><td>substring(str, a, b)</td><td>Extract substring</td></tr>
+        <tr><td>padStart(str, len, pad)</td><td>Pad start</td></tr>
+        <tr><td>padEnd(str, len, pad)</td><td>Pad end</td></tr>
+        <tr><td>camelCase(str)</td><td>Convert to camelCase</td></tr>
+        <tr><td>kebabCase(str)</td><td>Convert to kebab-case</td></tr>
+        <tr><td>encodeURLComponent(str)</td><td>URL encode</td></tr>
+    </table>
+
+    <h2>2. Math Functions</h2>
+    <table>
+        <tr><th>Function</th><th>Description</th></tr>
+        <tr><td>floor(num)</td><td>Round down</td></tr>
+        <tr><td>ceil(num)</td><td>Round up</td></tr>
+        <tr><td>round(num)</td><td>Round nearest</td></tr>
+        <tr><td>abs(num)</td><td>Absolute value</td></tr>
+        <tr><td>pow(base, exp)</td><td>Power</td></tr>
+        <tr><td>sqrt(num)</td><td>Square root</td></tr>
+        <tr><td>min(...nums)</td><td>Minimum</td></tr>
+        <tr><td>max(...nums)</td><td>Maximum</td></tr>
+        <tr><td>random(min, max)</td><td>Random integer (exclusive)</td></tr>
+        <tr><td>randomInt(min, max)</td><td>Random integer (inclusive)</td></tr>
+        <tr><td>randomFloat(min, max)</td><td>Random float</td></tr>
+        <tr><td>clamp(value, min, max)</td><td>Clamp range</td></tr>
+        <tr><td>sign(value)</td><td>Return sign</td></tr>
+        <tr><td>lerp(a, b, t)</td><td>Linear interpolation</td></tr>
+        <tr><td>degToRad(deg)</td><td>Degrees to radians</td></tr>
+        <tr><td>radToDeg(rad)</td><td>Radians to degrees</td></tr>
+    </table>
+
+    <h2>3. Array Functions</h2>
+    <table>
+        <tr><th>Function</th><th>Description</th></tr>
+        <tr><td>map(array, fn)</td><td>Transform array</td></tr>
+        <tr><td>filter(array, fn)</td><td>Filter elements</td></tr>
+        <tr><td>reduce(array, fn, initial)</td><td>Reduce to value</td></tr>
+        <tr><td>push(arr, value)</td><td>Add element</td></tr>
+        <tr><td>pop(arr)</td><td>Remove last</td></tr>
+        <tr><td>shift(arr)</td><td>Remove first</td></tr>
+        <tr><td>unshift(arr, value)</td><td>Add first</td></tr>
+        <tr><td>sort(arr, fn)</td><td>Sort array</td></tr>
+        <tr><td>reverse(arr)</td><td>Reverse array</td></tr>
+        <tr><td>unique(arr)</td><td>Remove duplicates</td></tr>
+        <tr><td>uniqueBy(arr, fn)</td><td>Unique by key</td></tr>
+        <tr><td>indexOf(arr, value)</td><td>Find index</td></tr>
+        <tr><td>includesArr(arr, value)</td><td>Check existence</td></tr>
+        <tr><td>flatten(arr)</td><td>Flatten array</td></tr>
+        <tr><td>randomChoice(arr)</td><td>Random element</td></tr>
+        <tr><td>count(arr, value)</td><td>Count values</td></tr>
+        <tr><td>range(start, end, step)</td><td>Generate range</td></tr>
+    </table>
+
+    <h2>4. File System Functions</h2>
+    <table>
+        <tr><th>Function</th><th>Description</th></tr>
+        <tr><td>readFile(path)</td><td>Read file</td></tr>
+        <tr><td>writeFile(path, content)</td><td>Write file</td></tr>
+        <tr><td>appendFile(path, content)</td><td>Append file</td></tr>
+        <tr><td>deleteFile(path)</td><td>Delete file</td></tr>
+        <tr><td>exists(path)</td><td>Check existence</td></tr>
+        <tr><td>mkdir(path)</td><td>Create directory</td></tr>
+        <tr><td>rmdir(path)</td><td>Remove directory</td></tr>
+        <tr><td>readJSON(path)</td><td>Read JSON</td></tr>
+        <tr><td>writeJSON(path, obj)</td><td>Write JSON</td></tr>
+    </table>
+
+    <h2>5. Network Functions</h2>
+    <table>
+        <tr><th>Function</th><th>Description</th></tr>
+        <tr><td>fetch(url, options)</td><td>HTTP request</td></tr>
+        <tr><td>get(url)</td><td>GET JSON</td></tr>
+        <tr><td>post(url, data)</td><td>POST JSON</td></tr>
+    </table>
+
+    <h2>6. Object Functions</h2>
+    <table>
+        <tr><th>Function</th><th>Description</th></tr>
+        <tr><td>keys(obj)</td><td>Get keys</td></tr>
+        <tr><td>values(obj)</td><td>Get values</td></tr>
+        <tr><td>entries(obj)</td><td>Get entries</td></tr>
+        <tr><td>has(obj, key)</td><td>Check property</td></tr>
+        <tr><td>merge(obj1, obj2)</td><td>Merge objects</td></tr>
+        <tr><td>deepClone(obj)</td><td>Deep copy</td></tr>
+    </table>
+
+    <h2>7. Conversion & Types</h2>
+    <table>
+        <tr><th>Function</th><th>Description</th></tr>
+        <tr><td>toStr(value)</td><td>Convert to string</td></tr>
+        <tr><td>num(value)</td><td>Convert to number</td></tr>
+        <tr><td>type(value)</td><td>Basic type</td></tr>
+        <tr><td>len(value)</td><td>Length</td></tr>
+    </table>
+
+    <h2>8. Utility Functions</h2>
+    <table>
+        <tr><th>Function</th><th>Description</th></tr>
+        <tr><td>uuid()</td><td>Generate UUID</td></tr>
+        <tr><td>sleep(ms)</td><td>Delay execution</td></tr>
+        <tr><td>ask(prompt)</td><td>User input</td></tr>
+    </table>
+
+    <h2>Notes</h2>
+    <table>
+        <tr><th>Case</th><th>Behavior</th></tr>
+        <tr><td>Type conversion</td><td>Automatic</td></tr>
+        <tr><td>Invalid input</td><td>Runtime error</td></tr>
+        <tr><td>File operations</td><td>Synchronous</td></tr>
+        <tr><td>Network functions</td><td>Asynchronous</td></tr>
+    </table>
+
+</div>
+
+</body>
+</html>
