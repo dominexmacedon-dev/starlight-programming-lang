@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starlight Language Syntax Reference</title>
+
+    <meta name="description" content="Complete syntax reference for Starlight programming language including statements, expressions, operators, and edge cases.">
+    <meta name="keywords" content="starlight language syntax, scripting language reference, interpreter syntax, programming language grammar, AST interpreter">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #e5e7eb;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #020617;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h2 {
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 6px;
+            margin-top: 30px;
+        }
+
+        h3 {
+            margin-top: 20px;
+        }
+
+        pre {
+            background: #020617;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            border: 1px solid #1e293b;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #020617;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Starlight Language Syntax Reference</h1>
+    <p>Complete guide to syntax, expressions, and execution rules</p>
+</header>
+
+<div class="container">
+
+    <h2>1. Program Structure</h2>
+    <pre><code>
+define x = 10
+sldeploy x
+    </code></pre>
+
+    <h2>2. Statements</h2>
+
+    <h3>2.1 Variable Declaration</h3>
+    <pre><code>
+define name = "Alice"
+    </code></pre>
+
+    <table>
+        <tr><th>Rule</th><th>Description</th></tr>
+        <tr><td>Initialization</td><td>Required</td></tr>
+        <tr><td>Typing</td><td>Dynamic</td></tr>
+    </table>
+
+    <h3>2.2 Assignment</h3>
+    <pre><code>
+x = 20
+    </code></pre>
+
+    <table>
+        <tr><th>Operator</th><th>Description</th></tr>
+        <tr><td>+=</td><td>Addition assignment</td></tr>
+        <tr><td>-=</td><td>Subtraction assignment</td></tr>
+        <tr><td>*=</td><td>Multiplication assignment</td></tr>
+        <tr><td>/=</td><td>Division assignment</td></tr>
+        <tr><td>%=</td><td>Modulus assignment</td></tr>
+    </table>
+
+    <h3>2.3 Output</h3>
+    <pre><code>
+sldeploy value
+    </code></pre>
+
+    <table>
+        <tr><th>Behavior</th><th>Description</th></tr>
+        <tr><td>Output</td><td>Prints formatted value</td></tr>
+    </table>
+
+    <h3>2.4 Input</h3>
+    <pre><code>
+define input = ask("Enter value:")
+    </code></pre>
+
+    <h3>2.5 Conditional</h3>
+    <pre><code>
+if (condition) {
+    ...
+} else {
+    ...
+}
+    </code></pre>
+
+    <h3>2.6 While Loop</h3>
+    <pre><code>
+while (condition) {
+    ...
+}
+    </code></pre>
+
+    <h3>2.7 For Loop</h3>
+    <pre><code>
+for (let i = 0; i < 10; i = i + 1) {
+    ...
+}
+    </code></pre>
+
+    <h3>2.8 For-In Loop</h3>
+    <pre><code>
+for item in array {
+    ...
+}
+    </code></pre>
+
+    <table>
+        <tr><th>Type</th><th>Behavior</th></tr>
+        <tr><td>Array</td><td>Iterates values</td></tr>
+        <tr><td>Object</td><td>Iterates keys</td></tr>
+    </table>
+
+    <h3>2.9 Loop Control</h3>
+    <pre><code>
+break
+continue
+    </code></pre>
+
+    <h3>2.10 Functions</h3>
+    <pre><code>
+func add(a, b) {
+    return a + b
+}
+    </code></pre>
+
+    <h3>2.11 Arrow Functions</h3>
+    <pre><code>
+define add = (a, b) => a + b
+    </code></pre>
+
+    <h3>2.12 Import</h3>
+    <pre><code>
+import math from "math"
+    </code></pre>
+
+    <h3>2.13 Error Handling</h3>
+    <pre><code>
+do {
+    ...
+} track {
+    ...
+}
+    </code></pre>
+
+    <h3>2.14 Start Statement</h3>
+    <pre><code>
+start (value) {
+    case 1 {
+        ...
+    }
+}
+    </code></pre>
+
+    <h3>2.15 Await</h3>
+    <pre><code>
+define result = await asyncCall()
+    </code></pre>
+
+    <h2>3. Expressions</h2>
+
+    <table>
+        <tr><th>Type</th><th>Example</th></tr>
+        <tr><td>Identifier</td><td>x</td></tr>
+        <tr><td>Binary</td><td>a + b</td></tr>
+        <tr><td>Logical</td><td>a AND b</td></tr>
+        <tr><td>Unary</td><td>!x</td></tr>
+        <tr><td>Conditional</td><td>cond ? a : b</td></tr>
+        <tr><td>Call</td><td>fn()</td></tr>
+        <tr><td>Member</td><td>obj.key</td></tr>
+        <tr><td>Index</td><td>arr[0]</td></tr>
+    </table>
+
+    <h3>Arrays</h3>
+    <pre><code>[1, 2, 3]</code></pre>
+
+    <h3>Objects</h3>
+    <pre><code>
+{
+    "a": 1,
+    "b": 2
+}
+    </code></pre>
+
+    <h3>Slice</h3>
+    <pre><code>
+arr[start:end]
+arr[start:end:step]
+    </code></pre>
+
+    <h2>4. Operators</h2>
+
+    <table>
+        <tr><th>Category</th><th>Operators</th></tr>
+        <tr><td>Arithmetic</td><td>+ - * / %</td></tr>
+        <tr><td>Assignment</td><td>= += -= *= /= %=</td></tr>
+        <tr><td>Comparison</td><td>== != < <= > >=</td></tr>
+        <tr><td>Logical</td><td>AND OR ??</td></tr>
+        <tr><td>Unary</td><td>! + -</td></tr>
+    </table>
+
+    <h2>5. Edge Cases</h2>
+
+    <table>
+        <tr><th>Case</th><th>Behavior</th></tr>
+        <tr><td>Undefined variable</td><td>Error</td></tr>
+        <tr><td>Division by zero</td><td>Error</td></tr>
+        <tr><td>Out-of-bounds array</td><td>undefined</td></tr>
+        <tr><td>Missing object property</td><td>undefined</td></tr>
+        <tr><td>Call non-function</td><td>Error</td></tr>
+    </table>
+
+    <h2>6. Notes</h2>
+
+    <table>
+        <tr><th>Feature</th><th>Description</th></tr>
+        <tr><td>Typing</td><td>Dynamic</td></tr>
+        <tr><td>Structures</td><td>Mutable</td></tr>
+        <tr><td>Functions</td><td>Closures supported</td></tr>
+        <tr><td>Error reporting</td><td>Line + column</td></tr>
+    </table>
+
+</div>
+
+</body>
+</html>
